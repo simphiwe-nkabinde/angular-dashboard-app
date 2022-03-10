@@ -1,0 +1,38 @@
+@import '/src/styles.scss';
+.auction-card {
+    width: 16rem;
+    @extend .shadow-sm;
+    @extend .m-4;
+    @extend .btn;
+    @extend .p-0;
+
+    .card-top {
+        height: 2.5rem;
+        @extend .p-2;
+        @extend .text-light;
+        @extend .text-capitalize;
+        @extend .bg-primary-blue;
+        @extend .border-bottom;
+        @extend .border-danger;
+        @extend .border-2;
+    }
+    .card-mid {
+        img {
+            width: 16rem;
+        }
+    }
+    .card-bottom {
+        height: 2.5rem;
+        @extend .d-flex;
+        @extend .align-items-center;
+        @extend .p-2;
+        @extend .text-dark-grey;
+
+        i {
+            @extend .me-2;
+        }
+        p {
+            @extend .m-0
+        }
+    }
+}

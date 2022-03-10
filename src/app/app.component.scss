@@ -1,0 +1,6 @@
+@import '/src/styles.scss';
+
+main {
+    margin-left: 200px;
+    @extend .p-4;
+}

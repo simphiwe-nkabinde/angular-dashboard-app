@@ -1,0 +1,30 @@
+@import '/src/styles.scss';
+#sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    @extend .bg-primary-blue;
+    @extend .text-light;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-evenly;
+    @extend .text-center;
+    @extend .shadow;
+
+    a {
+        @extend .text-start;
+        @extend .link-light;
+        @extend .d-block;
+        @extend .text-decoration-none;
+        @extend .p-2;
+        i {
+            @extend .ms-2;
+        }
+    }
+    a:hover {
+        @extend .bg-primary-blue
+    }
+}
