@@ -15,6 +15,7 @@ import { DashboardAuctionApplicantComponent } from './pages/dashboard-auction-ap
 import { CardAuctionComponent } from './components/card-auction/card-auction.component';
 import { CardAuctionMenuItemComponent } from './components/card-auction-menu-item/card-auction-menu-item.component';
 import { CardAuctionItemComponent } from './components/card-auction-item/card-auction-item.component';
+import { ApplicantCardComponent } from './components/applicant-card/applicant-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CardAuctionItemComponent } from './components/card-auction-item/card-au
     DashboardAuctionApplicantComponent,
     CardAuctionComponent,
     CardAuctionMenuItemComponent,
-    CardAuctionItemComponent
+    CardAuctionItemComponent,
+    ApplicantCardComponent
   ],
   imports: [
     BrowserModule,

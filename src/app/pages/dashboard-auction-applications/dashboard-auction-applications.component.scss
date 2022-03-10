@@ -1,0 +1,16 @@
+@import '/src/styles.scss';
+ol {
+    list-style: none;
+    counter-reset: step-counter;
+    
+    li {
+        counter-increment: step-counter;
+    }
+    li ::before {
+        position: absolute;
+        content: counter(step-counter) " ";
+        @extend .ps-1;
+        @extend .ms-1;
+
+    }
+}

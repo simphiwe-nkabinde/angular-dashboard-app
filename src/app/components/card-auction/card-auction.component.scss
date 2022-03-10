@@ -2,6 +2,7 @@
 .auction-card {
     width: 16rem;
     @extend .shadow-sm;
+    @extend .rounded-0;
     @extend .m-4;
     @extend .btn;
     @extend .p-0;

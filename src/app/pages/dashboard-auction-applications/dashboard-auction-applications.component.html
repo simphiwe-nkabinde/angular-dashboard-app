@@ -1,1 +1,50 @@
-<p>dashboard-auction-applications works!</p>
+<header>
+    <a class="d-flex link-primary" [routerLink]="['../']">
+       <i class="bi bi-chevron-left"></i> 
+       <p class="m-0">auction-name</p>
+    </a>
+    <div class="d-flex justify-content-between">
+        <div>
+            <p class="ps-2 fs-1 m-0 d-flex">
+                auction-name
+                <i class="bi bi-chevron-right"></i>
+                Applications
+            </p>
+            <p class="text-muted m-0 ms-2 small">
+                start date | start time - start date | start time
+            </p>              
+        </div>
+        <div class="align-self-center me-3 d-flex align-items-center">
+            show: 
+            <select class="form-select form-select-sm rounded-0 ms-2" aria-label="Default select example">
+                <option selected value="all">All</option>
+                <option value="upcoming">pending</option>
+                <option value="past">approved</option>
+                <option value="cancelled">declined</option>
+              </select>
+        </div>
+    </div>
+
+</header>
+<app-header-rule></app-header-rule>
+
+
+<div class="p-4">
+    <div >
+        <p class="text-muted fs-4">
+            Total: 10
+        </p>
+        <ol>
+            <li><app-applicant-card [color]="'success'" [status]="'approved'" [icon]="'check-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'success'" [status]="'approved'" [icon]="'check-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'warning'" [status]="'pending'" [icon]="'hourglass'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'success'" [status]="'approved'" [icon]="'check-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'warning'" [status]="'pending'" [icon]="'hourglass'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'danger'" [status]="'declined'" [icon]="'x-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'success'" [status]="'approved'" [icon]="'check-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'warning'" [status]="'pending'" [icon]="'hourglass'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'success'" [status]="'approved'" [icon]="'check-lg'"></app-applicant-card></li>
+            <li><app-applicant-card [color]="'danger'" [status]="'declined'" [icon]="'x-lg'"></app-applicant-card></li>
+        </ol>        
+    </div>
+</div>
