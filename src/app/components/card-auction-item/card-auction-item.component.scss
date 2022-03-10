@@ -1,0 +1,34 @@
+@import '/src/styles.scss';
+.auction-item-card {
+    width: 20rem;
+    @extend .shadow-sm;
+    @extend .m-4;
+    @extend .btn;
+    @extend .p-0;
+
+    .card-top {
+        height: 2.5rem;
+        @extend .p-2;
+        @extend .text-light;
+        @extend .text-capitalize;
+        @extend .bg-primary-blue;
+        @extend .border-bottom;
+        @extend .border-danger;
+        @extend .border-2;
+    }
+    .card-mid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    .card-bottom {
+        // height: 3rem;
+        @extend .text-start;
+        @extend .p-2;
+        @extend .text-dark-grey;
+        p {
+            @extend .m-0;
+            @extend .small;
+        }
+    }
+}

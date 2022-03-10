@@ -1,0 +1,9 @@
+<a [routerLink]="route" class="menu-item-card">
+    <div class="card-top">
+        {{title}}
+        <span *ngIf="count">({{count}})</span>
+    </div>
+    <div class="card-mid">
+        <i class="bi bi-{{icon}}"></i>
+    </div>
+</a>

@@ -1,1 +1,20 @@
-<p>dashboard-auction works!</p>
+<header>
+    <a class="d-flex link-primary" [routerLink]="['/dashboard']">
+       <i class="bi bi-chevron-left"></i> 
+       <p class="m-0">Dashboard</p>
+    </a>
+    
+    <p class="ps-2 fs-1 m-0">
+        auction-name
+    </p>
+    <p class="text-muted m-0 ms-2 small">
+        start date | start time - start date | start time
+    </p>
+</header>
+<app-header-rule></app-header-rule>
+
+<div class="p-1 d-flex flex-wrap">
+    <app-card-auction-menu-item [title]="'auction items'"  [icon]="'list-ul'" [count]="5" [route]="'./items'"></app-card-auction-menu-item>
+    <app-card-auction-menu-item [title]="'applications'" [icon]="'file-earmark-text'" [count]="9" [route]="'./applications'"></app-card-auction-menu-item>
+    <app-card-auction-menu-item [title]="'auction details'" [icon]="'list-columns'" [route]="'./details'"></app-card-auction-menu-item>
+</div>

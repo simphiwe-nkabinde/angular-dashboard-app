@@ -1,0 +1,24 @@
+@import '/src/styles.scss';
+.menu-item-card {
+    width: 10rem;
+    height: 13rem;
+    @extend .shadow-sm;
+    @extend .m-4;
+    @extend .btn;
+    @extend .p-0;
+
+    .card-top {
+        height: 2rem;
+        @extend .p-1;
+        @extend .text-light;
+        @extend .text-capitalize;
+        @extend .bg-primary-blue;
+        @extend .border-bottom;
+        @extend .border-danger;
+        @extend .border-2;
+    }
+    .card-mid {
+        font-size: 7rem;
+        @extend .fw-bolder;
+    }
+}

@@ -13,6 +13,8 @@ import { DashboardAuctionItemComponent } from './pages/dashboard-auction-item/da
 import { DashboardAuctionApplicationsComponent } from './pages/dashboard-auction-applications/dashboard-auction-applications.component';
 import { DashboardAuctionApplicantComponent } from './pages/dashboard-auction-applicant/dashboard-auction-applicant.component';
 import { CardAuctionComponent } from './components/card-auction/card-auction.component';
+import { CardAuctionMenuItemComponent } from './components/card-auction-menu-item/card-auction-menu-item.component';
+import { CardAuctionItemComponent } from './components/card-auction-item/card-auction-item.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { CardAuctionComponent } from './components/card-auction/card-auction.com
     DashboardAuctionItemComponent,
     DashboardAuctionApplicationsComponent,
     DashboardAuctionApplicantComponent,
-    CardAuctionComponent
+    CardAuctionComponent,
+    CardAuctionMenuItemComponent,
+    CardAuctionItemComponent
   ],
   imports: [
     BrowserModule,

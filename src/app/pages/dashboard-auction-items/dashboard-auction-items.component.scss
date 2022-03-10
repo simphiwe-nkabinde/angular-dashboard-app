@@ -1,0 +1,18 @@
+@import '/src/styles.scss';
+.add-new-card {
+    width: 20rem;
+    @extend .btn;
+    @extend .shadow-sm;
+    @extend .m-4;
+    @extend .bg-light;
+    @extend .text-center;
+    @extend .border;
+    @extend .d-flex;
+    @extend .flex-column;
+    @extend .justify-content-center;
+
+    i {
+        @extend .fs-1;
+        @extend .fw-bolder;
+    }
+}
