@@ -1,1 +1,48 @@
-<p>dashboard-auction-item works!</p>
+<header>
+    <a class="d-flex link-primary" [routerLink]="['../']">
+       <i class="bi bi-chevron-left"></i> 
+       <p class="m-0">items</p>
+    </a>
+    
+    <p class="ps-2 fs-1 m-0 d-flex">
+        auction-name
+        <i class="bi bi-chevron-right"></i>
+        Items
+        <i class="bi bi-chevron-right"></i>
+        item-name
+    </p>
+    <p class="text-muted m-0 ms-2 small">
+        start date | start time - start date | start time
+    </p>
+</header>
+<app-header-rule></app-header-rule>
+
+<section class="p-3">
+    <div>
+        <h3 (click)="toggleImagesDisplay()">
+            <i *ngIf="showImages" class="bi bi-chevron-down"></i>
+            <i *ngIf="!showImages" class="bi bi-chevron-right"></i>
+            Item Details
+        </h3>
+        <div class="ms-5">
+            <p class="small text-muted">
+                images of the item on auction. The images will be visible to the users
+            </p>
+            <input type="file" class="d-none" id="image-input" name="filename" (change)="handleFiles($event)">
+            <div class="d-flex flex-wrap m-3">
+                <div id="img-preview" class="d-flex flex-wrap">
+                </div>
+                <div class="m-2 add-img text-center" (click)="addImageClick()">
+                    <i class="bi bi-plus-lg display-2"></i>
+                    <p>upload image</p>
+                </div>               
+            </div>
+            <button class="btn btn-sm btn-success shadow-sm">save</button>
+            <span class="text-muted ms-3">
+                <i class="bi bi-slash-circle"></i>
+                changes not saved
+            </span>
+        </div>
+        <hr>
+    </div>
+</section>

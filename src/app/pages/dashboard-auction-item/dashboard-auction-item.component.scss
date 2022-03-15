@@ -1,0 +1,10 @@
+@import '/src/styles.scss';
+
+.add-img {
+    width: 8rem;
+    height: 8rem;
+    cursor: pointer;
+    @extend .border;
+    @extend .rounded;
+    @extend .text-muted;
+}
