@@ -19,12 +19,12 @@
 
 <section class="p-3">
     <div>
-        <h3 (click)="toggleImagesDisplay()">
+        <h3 (click)="showHideSection('images')">
             <i *ngIf="showImages" class="bi bi-chevron-down"></i>
             <i *ngIf="!showImages" class="bi bi-chevron-right"></i>
-            Item Details
+            Images
         </h3>
-        <div class="ms-5">
+        <div class="ms-5" *ngIf="showImages">
             <p class="small text-muted">
                 images of the item on auction. The images will be visible to the users
             </p>
@@ -33,10 +33,66 @@
                 <div id="img-preview" class="d-flex flex-wrap">
                 </div>
                 <div class="m-2 add-img text-center" (click)="addImageClick()">
-                    <i class="bi bi-plus-lg display-2"></i>
+                    <i class="bi bi-plus-lg display-3"></i>
                     <p>upload image</p>
                 </div>               
             </div>
+            <button class="btn btn-sm btn-success shadow-sm">save</button>
+            <span class="text-muted ms-3">
+                <i class="bi bi-slash-circle"></i>
+                changes not saved
+            </span>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <h3 (click)="showHideSection('documents')">
+            <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
+            <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
+            Documents
+        </h3>
+        <div class="ms-5" *ngIf="showDocuments">
+            <p class="small text-muted">
+                legal and non-legal documents related to the  lot on auction. These documents will be accessible to all users
+            </p>
+            <input type="file" class="d-none" id="image-input" name="filename" (change)="handleFiles($event)">
+            <div class="d-flex flex-wrap m-3">
+                <div id="img-preview" class="d-flex flex-wrap">
+                </div>
+                <div class="m-2 add-img text-center" (click)="addImageClick()">
+                    <i class="bi bi-plus-lg display-3"></i>
+                    <p>upload document</p>
+                </div>               
+            </div>
+            <button class="btn btn-sm btn-success shadow-sm">save</button>
+            <span class="text-muted ms-3">
+                <i class="bi bi-slash-circle"></i>
+                changes not saved
+            </span>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <h3 (click)="showHideSection('details')">
+            <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
+            <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
+            Details
+        </h3>
+        <div class="ms-5" *ngIf="showDetails">
+            <p class="small text-muted">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, provident.
+            </p>
+            
+            <div class="NgxEditor__Wrapper my-4">
+                <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+                <ngx-editor
+                  [editor]="editor"
+                  (ngModel)="html"
+                  (disabled)="false"
+                  [placeholder]="'Type here...'"
+                ></ngx-editor>
+              </div>
+
             <button class="btn btn-sm btn-success shadow-sm">save</button>
             <span class="text-muted ms-3">
                 <i class="bi bi-slash-circle"></i>

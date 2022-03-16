@@ -1,13 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Editor } from 'ngx-editor';
 
 @Component({
   selector: 'page-dashboard-auction-item',
   templateUrl: './dashboard-auction-item.component.html',
   styleUrls: ['./dashboard-auction-item.component.scss']
 })
-export class DashboardAuctionItemComponent implements OnInit {
+export class DashboardAuctionItemComponent implements OnInit, OnDestroy {
+  editor: Editor = new Editor;
+  html = '';
 
   showImages: boolean = true;
+  showDocuments: boolean = true;
+  showDetails: boolean = true;
   preview: any;
   imageInput: any;
   newImage = <HTMLInputElement>document.getElementById('new-image')
@@ -17,6 +22,11 @@ export class DashboardAuctionItemComponent implements OnInit {
   ngOnInit(): void {
     this.preview = <HTMLInputElement>document.getElementById('img-preview');
     this.imageInput = <HTMLInputElement>document.getElementById("image-input");
+    this.editor = new Editor();
+  }
+
+  ngOnDestroy(): void {
+    this.editor?.destroy();
   }
 
   handleFiles(event: any) {
@@ -57,7 +67,18 @@ export class DashboardAuctionItemComponent implements OnInit {
     this.imageInput.click()
   }
 
-  toggleImagesDisplay() {
-    this.showImages = !this.showImages
+  showHideSection(section: string) {
+    switch (section) {
+      case 'images':
+        this.showImages = !this.showImages
+        break;
+      case 'documents':
+        this.showDocuments = !this.showDocuments;
+        break;
+      case 'details':
+        this.showDetails = !this.showDetails;
+        break;
+    }
   }
+  
 }
