@@ -1,1 +1,135 @@
-<p>dashboard-auction-applicant works!</p>
+<header>
+    <a class="d-flex link-primary" [routerLink]="['../']">
+       <i class="bi bi-chevron-left"></i> 
+       <p class="m-0">applications</p>
+    </a>
+    
+    <p class="ps-2 fs-1 m-0 d-flex">
+        auction-name
+        <i class="bi bi-chevron-right"></i>
+        applications
+    </p>
+    <p class="text-muted m-0 ms-2 small">
+        applicant name | 507f1f77bcf86cd799439011
+    </p>
+</header>
+<app-header-rule></app-header-rule>
+
+<div class="btn btn-outline-warning float-end">
+    pending
+</div>
+
+<section class="p-3">
+    <div>
+        <h3 (click)="showHideSection('documents')">
+            <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
+            <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
+            Documents
+        </h3>
+        <div class="ms-5" *ngIf="showDocuments">
+            <p class="small text-muted">
+                Downlaod documents to view and verify credibility of applicant
+            </p>
+            <div class="d-flex flex-wrap align-items-end ">
+                <div class="doc-container">
+                    <p>ID Document</p>
+                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                        <div class="doc-download">
+                            <p class="doc-card-top">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </p>
+                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                        </div>
+                        <p class="text-muted text-start">name-of-document.pdf</p>
+                    </a>
+                </div>
+                <div class="doc-container">
+                    <p>Proof of Residence</p>
+                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                        <div class="doc-download">
+                            <p class="doc-card-top">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </p>
+                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                        </div>
+                        <p class="text-muted text-start">name-of-document.pdf</p>
+                    </a>
+                </div>
+                <div class="doc-container">
+                    <p>Proof of Payment</p>
+                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                        <div class="doc-download">
+                            <p class="doc-card-top">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </p>
+                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                        </div>
+                        <p class="text-muted text-start">name-of-document.pdf</p>
+                    </a>
+                </div>
+                <div class="doc-container">
+                    <p>Signed Auction Rules</p>
+                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                        <div class="doc-download">
+                            <p class="doc-card-top">
+                                <i class="bi bi-download"></i>
+                                Download
+                            </p>
+                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                        </div>
+                        <p class="text-muted text-start">name-of-document.pdf</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    
+    <div>
+        <h3 (click)="showHideSection('details')">
+            <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
+            <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
+            Details
+        </h3>
+        <div class="ms-5" *ngIf="showDetails">
+            <p class="small text-muted">
+                images of the item on auction. The images will be visible to the users
+            </p>
+            <div class="container">
+                <p class="">
+                    <span class="fw-bold">user-property:   </span><span class="">user's-data</span>
+                </p>
+                <p class="">
+                    <span class="fw-bold">user-property:   </span><span class="">user's-data</span>
+                </p>
+                <p class="">
+                    <span class="fw-bold">user-property:   </span><span class="">user's-data</span>
+                </p>
+                <p class="">
+                    <span class="fw-bold">user-property:   </span><span class="">user's-data</span>
+                </p>
+            </div>
+        </div>        
+        <hr>
+
+        <h5>Status</h5>
+        <form>
+            <div class="form-check  text-success">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">Approve Application</label>
+              </div>
+              <div class="form-check text-danger">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">Decline Application</label>
+            </div>
+            <div class="form-floatin mt-3 w-75">
+                <textarea class="form-control" placeholder="Leave a comment here" id="decline-reason"></textarea>
+                <label class="" for="decline-reason">Reason For Decline</label>
+            </div>
+            <button class="btn btn-success my-3">submit response</button>
+        </form>
+    </div>
+</section>

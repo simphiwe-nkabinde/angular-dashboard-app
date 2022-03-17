@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardAuctionApplicantComponent implements OnInit {
 
+  showDocuments: boolean = true;
+  showDetails: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showHideSection(section: string) {
+    switch (section) {
+      case 'documents':
+        this.showDocuments = !this.showDocuments;
+        break;
+      case 'details':
+        this.showDetails = !this.showDetails;
+        break;
+    }
+  }
 }
