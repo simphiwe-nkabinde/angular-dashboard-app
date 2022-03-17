@@ -1,0 +1,32 @@
+@import '/src/styles.scss';
+
+.doc-container {
+    width: 7rem;
+    @extend .text-center;
+    @extend .mx-3;
+
+    p {
+        @extend .m-0;
+    }
+    .doc-download {
+        height: 9rem;
+        width: 7rem;
+        @extend .border;
+        @extend .border-2;
+        @extend .border-dark;
+        @extend .rounded;
+        @extend .btn;
+        @extend .p-0;
+    }  
+    i {
+        @extend .text-dark;
+    }
+    .doc-card-top {
+        @extend .bg-secondary; 
+        @extend .text-light; 
+        @extend .m-0;
+        @extend .fs-6;
+        @extend .p-1;
+    }
+}
+  
