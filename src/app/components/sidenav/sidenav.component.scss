@@ -25,7 +25,11 @@
         }
     }
     a:hover {
-        @extend .bg-primary-blue
+        @extend .bg-primary-blue;
+    }
+
+    .name {
+        @extend .ms-2;
     }
 }
 

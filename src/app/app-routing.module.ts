@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DashboardAuctionComponent } from './pages//dashboard-auction/dashboard-auction.component';
-import { DashboardAuctionApplicantComponent } from './pages/dashboard-auction-applicant/dashboard-auction-applicant.component';
+import { DashboardAuctionBidderComponent } from './pages/dashboard-auction-bidder/dashboard-auction-bidder.component';
 import { DashboardAuctionBiddersComponent } from './pages/dashboard-auction-bidders/dashboard-auction-bidders.component';
 import { DashboardAuctionDetailsComponent } from './pages/dashboard-auction-details/dashboard-auction-details.component';
 import { DashboardAuctionItemComponent } from './pages/dashboard-auction-item/dashboard-auction-item.component';
@@ -12,7 +12,7 @@ import { AccountComponent } from './pages/account/account.component';
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'dashboard/auction', component: DashboardAuctionComponent },
-  { path: 'dashboard/auction/applicant', component: DashboardAuctionApplicantComponent },
+  { path: 'dashboard/auction/bidder', component: DashboardAuctionBidderComponent },
   { path: 'dashboard/auction/bidders', component: DashboardAuctionBiddersComponent },
   { path: 'dashboard/auction/details', component: DashboardAuctionDetailsComponent },
   { path: 'dashboard/auction/item', component: DashboardAuctionItemComponent },

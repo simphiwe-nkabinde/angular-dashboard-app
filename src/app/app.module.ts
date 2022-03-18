@@ -12,11 +12,11 @@ import { DashboardAuctionDetailsComponent } from './pages/dashboard-auction-deta
 import { DashboardAuctionItemsComponent } from './pages/dashboard-auction-items/dashboard-auction-items.component';
 import { DashboardAuctionItemComponent } from './pages/dashboard-auction-item/dashboard-auction-item.component';
 import { DashboardAuctionBiddersComponent } from './pages/dashboard-auction-bidders/dashboard-auction-bidders.component';
-import { DashboardAuctionApplicantComponent } from './pages/dashboard-auction-applicant/dashboard-auction-applicant.component';
+import { DashboardAuctionBidderComponent } from './pages/dashboard-auction-bidder/dashboard-auction-bidder.component';
 import { CardAuctionComponent } from './components/card-auction/card-auction.component';
 import { CardAuctionMenuItemComponent } from './components/card-auction-menu-item/card-auction-menu-item.component';
 import { CardAuctionItemComponent } from './components/card-auction-item/card-auction-item.component';
-import { ApplicantCardComponent } from './components/applicant-card/applicant-card.component';
+import { BidderCardComponent } from './components/bidder-card/bidder-card.component';
 import { AccountComponent } from './pages/account/account.component';
 
 NgxEditorModule.forRoot({
@@ -66,11 +66,11 @@ NgxEditorModule.forRoot({
     DashboardAuctionItemsComponent,
     DashboardAuctionItemComponent,
     DashboardAuctionBiddersComponent,
-    DashboardAuctionApplicantComponent,
+    DashboardAuctionBidderComponent,
     CardAuctionComponent,
     CardAuctionMenuItemComponent,
     CardAuctionItemComponent,
-    ApplicantCardComponent,
+    BidderCardComponent,
     AccountComponent,
   ],
   imports: [

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'page-dashboard-auction-applicant',
-  templateUrl: './dashboard-auction-applicant.component.html',
-  styleUrls: ['./dashboard-auction-applicant.component.scss']
+  selector: 'page-dashboard-auction-bidder',
+  templateUrl: './dashboard-auction-bidder.component.html',
+  styleUrls: ['./dashboard-auction-bidder.component.scss']
 })
-export class DashboardAuctionApplicantComponent implements OnInit {
+export class DashboardAuctionBidderComponent implements OnInit {
 
   showDocuments: boolean = true;
   showDetails: boolean = true;
