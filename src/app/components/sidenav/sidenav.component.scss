@@ -28,3 +28,19 @@
         @extend .bg-primary-blue
     }
 }
+
+@media screen and (max-width: 480px) {
+    #sidenav {
+        width: 50px;
+
+        .company-name {
+            display: none;
+        }
+
+        a {
+            .name {
+                display: none;
+            }
+        }
+    }
+  }

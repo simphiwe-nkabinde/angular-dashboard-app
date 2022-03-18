@@ -11,7 +11,7 @@ import { DashboardAuctionComponent } from './pages/dashboard-auction/dashboard-a
 import { DashboardAuctionDetailsComponent } from './pages/dashboard-auction-details/dashboard-auction-details.component';
 import { DashboardAuctionItemsComponent } from './pages/dashboard-auction-items/dashboard-auction-items.component';
 import { DashboardAuctionItemComponent } from './pages/dashboard-auction-item/dashboard-auction-item.component';
-import { DashboardAuctionApplicationsComponent } from './pages/dashboard-auction-applications/dashboard-auction-applications.component';
+import { DashboardAuctionBiddersComponent } from './pages/dashboard-auction-bidders/dashboard-auction-bidders.component';
 import { DashboardAuctionApplicantComponent } from './pages/dashboard-auction-applicant/dashboard-auction-applicant.component';
 import { CardAuctionComponent } from './components/card-auction/card-auction.component';
 import { CardAuctionMenuItemComponent } from './components/card-auction-menu-item/card-auction-menu-item.component';
@@ -65,7 +65,7 @@ NgxEditorModule.forRoot({
     DashboardAuctionDetailsComponent,
     DashboardAuctionItemsComponent,
     DashboardAuctionItemComponent,
-    DashboardAuctionApplicationsComponent,
+    DashboardAuctionBiddersComponent,
     DashboardAuctionApplicantComponent,
     CardAuctionComponent,
     CardAuctionMenuItemComponent,

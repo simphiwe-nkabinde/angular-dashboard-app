@@ -5,3 +5,9 @@ main {
     @extend .px-4;
     @extend .py-1;
 }
+
+@media screen and (max-width: 480px) {
+    main {
+        margin-left: 50px;
+    }
+}
