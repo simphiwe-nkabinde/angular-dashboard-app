@@ -23,8 +23,8 @@ export class DashboardAuctionDetailsComponent implements OnInit, OnDestroy  {
   constructor() { }
 
   ngOnInit(): void {
-    this.preview = <HTMLInputElement>document.getElementById('doc-preview');
-    this.docInput = <HTMLInputElement>document.getElementById("doc-input");
+    // this.preview = <HTMLInputElement>document.getElementById('doc-preview');
+    // this.docInput = <HTMLInputElement>document.getElementById("doc-input");
   }
 
   ngOnDestroy(): void {
@@ -67,6 +67,8 @@ export class DashboardAuctionDetailsComponent implements OnInit, OnDestroy  {
   }
 
   addDocClick() {
+    this.preview = <HTMLInputElement>document.getElementById('doc-preview');
+    this.docInput = <HTMLInputElement>document.getElementById("doc-input");
     this.docInput.click()
   }
 
