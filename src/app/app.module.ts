@@ -18,6 +18,7 @@ import { CardAuctionMenuItemComponent } from './components/card-auction-menu-ite
 import { CardAuctionItemComponent } from './components/card-auction-item/card-auction-item.component';
 import { BidderCardComponent } from './components/bidder-card/bidder-card.component';
 import { AccountComponent } from './pages/account/account.component';
+import { LoginComponent } from './pages/login/login.component';
 
 NgxEditorModule.forRoot({
   locals: {
@@ -72,6 +73,7 @@ NgxEditorModule.forRoot({
     CardAuctionItemComponent,
     BidderCardComponent,
     AccountComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
