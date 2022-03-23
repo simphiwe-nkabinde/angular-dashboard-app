@@ -8,6 +8,12 @@ $dark-grey: #525252;
 .bg-primary-blue {
     background-color: $primary-blue;
 }
+.text-primary-blue {
+    color: $primary-blue;
+}
+.border-primary-blue {
+    border-color: $primary-blue !important;
+}
 .text-dark-grey {
     color: $dark-grey;
 }
