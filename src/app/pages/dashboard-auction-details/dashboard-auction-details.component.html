@@ -1,153 +1,157 @@
-<header>
-    <a class="d-flex link-primary" [routerLink]="['../']">
-       <i class="bi bi-chevron-left"></i> 
-       <p class="m-0">items</p>
-    </a>
-    
-    <p class="ps-2 fs-1 m-0 d-flex">
-        auction-name
-        <i class="bi bi-chevron-right"></i>
-        Items
-        <i class="bi bi-chevron-right"></i>
-        item-name
-    </p>
-    <p class="text-muted m-0 ms-2 small">
-        start date | start time - start date | start time
-    </p>
-</header>
-<app-header-rule></app-header-rule>
+<app-sidenav></app-sidenav>
+<div class="main-panel">
+    <header>
+        <a class="d-flex link-primary" [routerLink]="['../']">
+        <i class="bi bi-chevron-left"></i> 
+        <p class="m-0">items</p>
+        </a>
+        
+        <p class="ps-2 fs-1 m-0 d-flex">
+            auction-name
+            <i class="bi bi-chevron-right"></i>
+            Items
+            <i class="bi bi-chevron-right"></i>
+            item-name
+        </p>
+        <p class="text-muted m-0 ms-2 small">
+            start date | start time - start date | start time
+        </p>
+    </header>
+    <app-header-rule></app-header-rule>
 
-<section class="p-3">
-    <div>
-        <h3 (click)="showHideSection('documents')">
-            <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
-            <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
-            Documents
-        </h3>
-        <div class="ms-5" *ngIf="showDocuments">
-            <p class="small text-muted">
-                legal and non-legal documents related to the  lot on auction. These documents will be accessible to all users
-            </p>
-            <input type="file" class="d-none" id="doc-input" name="filename" (change)="handleFiles($event)">
-            <div class="d-flex flex-wrap m-3">
-                <div id="doc-preview" class="d-flex flex-wrap">
+    <section class="p-3">
+        <div>
+            <h3 (click)="showHideSection('documents')">
+                <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
+                <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
+                Documents
+            </h3>
+            <div class="ms-5" *ngIf="showDocuments">
+                <p class="small text-muted">
+                    legal and non-legal documents related to the  lot on auction. These documents will be accessible to all users
+                </p>
+                <input type="file" class="d-none" id="doc-input" name="filename" (change)="handleFiles($event)">
+                <div class="d-flex flex-wrap m-3">
+                    <div id="doc-preview" class="d-flex flex-wrap">
+                    </div>
+                    <div class="m-2 add-img text-center" (click)="addDocClick()">
+                        <i class="bi bi-plus-lg display-3"></i>
+                        <p>upload document</p>
+                    </div>               
                 </div>
-                <div class="m-2 add-img text-center" (click)="addDocClick()">
-                    <i class="bi bi-plus-lg display-3"></i>
-                    <p>upload document</p>
-                </div>               
+                <button class="btn btn-sm btn-success shadow-sm">save</button>
+                <span class="text-muted ms-3">
+                    <i class="bi bi-slash-circle"></i>
+                    changes not saved
+                </span>
             </div>
-            <button class="btn btn-sm btn-success shadow-sm">save</button>
-            <span class="text-muted ms-3">
-                <i class="bi bi-slash-circle"></i>
-                changes not saved
-            </span>
+            <hr>
         </div>
-        <hr>
-    </div>
-    <div>
-        <h3 (click)="showHideSection('details')">
-            <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
-            <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
-            Details
-        </h3>
-        <div class="ms-5" *ngIf="showDetails">
-            <form class="my-5">
-                <div class="mb-3 row">
-                    <label for="openDate" class="col-sm-3 col-form-label">Auction open</label>
-                    <div class="col-sm-3 d-flex align-items-center border rounded">
-                        <i class="bi bi-calendar-event-fill me-2"></i>
-                        <input type="date" class="form-control border-0" id="openDate">
+        <div>
+            <h3 (click)="showHideSection('details')">
+                <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
+                <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
+                Details
+            </h3>
+            <div class="ms-5" *ngIf="showDetails">
+                <form class="my-5">
+                    <div class="mb-3 row">
+                        <label for="openDate" class="col-sm-3 col-form-label">Auction open</label>
+                        <div class="col-sm-3 d-flex align-items-center border rounded">
+                            <i class="bi bi-calendar-event-fill me-2"></i>
+                            <input type="date" class="form-control border-0" id="openDate">
+                        </div>
+                        <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
+                            <i class="bi bi-clock me-2"></i>
+                            <input type="time" class="form-control border-0" id="openTime">
+                        </div>
                     </div>
-                    <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
-                        <i class="bi bi-clock me-2"></i>
-                        <input type="time" class="form-control border-0" id="openTime">
+                    <div class="mb-3 row">
+                        <label for="closeDate" class="col-sm-3 col-form-label">Auction close</label>
+                        <div class="col-sm-3 d-flex align-items-center border rounded">
+                            <i class="bi bi-calendar-event-fill me-2"></i>
+                            <input type="date" class="form-control border-0" id="closeDate">
+                        </div>
+                        <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
+                            <i class="bi bi-clock me-2"></i>
+                            <input type="time" class="form-control border-0" id="closeTime">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="closeDate" class="col-sm-3 col-form-label">Auction close</label>
-                    <div class="col-sm-3 d-flex align-items-center border rounded">
-                        <i class="bi bi-calendar-event-fill me-2"></i>
-                        <input type="date" class="form-control border-0" id="closeDate">
+                    <div class="mb-3 row">
+                        <label for="dueDate" class="col-sm-3 col-form-label">Payment & reg. due</label>
+                        <div class="col-sm-3 d-flex align-items-center border rounded">
+                            <i class="bi bi-calendar-event-fill me-2"></i>
+                            <input type="date" class="form-control border-0" id="dueDate">
+                        </div>
+                        <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
+                            <i class="bi bi-clock me-2"></i>
+                            <input type="time" class="form-control border-0" id="dueTime">
+                        </div>
                     </div>
-                    <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
-                        <i class="bi bi-clock me-2"></i>
-                        <input type="time" class="form-control border-0" id="closeTime">
+                    <div class="mb-3 row">
+                        <label for="collectDate" class="col-sm-3 col-form-label">Item collection date</label>
+                        <div class="col-sm-3 d-flex align-items-center border rounded">
+                            <i class="bi bi-calendar-event-fill me-2"></i>
+                            <input type="date" class="form-control border-0" id="collectDate">
+                        </div>
+                        <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
+                            <i class="bi bi-clock me-2"></i>
+                            <input type="time" class="form-control border-0" id="collectTime">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="dueDate" class="col-sm-3 col-form-label">Payment & reg. due</label>
-                    <div class="col-sm-3 d-flex align-items-center border rounded">
-                        <i class="bi bi-calendar-event-fill me-2"></i>
-                        <input type="date" class="form-control border-0" id="dueDate">
-                    </div>
-                    <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
-                        <i class="bi bi-clock me-2"></i>
-                        <input type="time" class="form-control border-0" id="dueTime">
-                    </div>
-                </div>
-                <div class="mb-3 row">
-                    <label for="collectDate" class="col-sm-3 col-form-label">Item collection date</label>
-                    <div class="col-sm-3 d-flex align-items-center border rounded">
-                        <i class="bi bi-calendar-event-fill me-2"></i>
-                        <input type="date" class="form-control border-0" id="collectDate">
-                    </div>
-                    <div class="col-sm-2 d-flex align-items-center border rounded ms-2">
-                        <i class="bi bi-clock me-2"></i>
-                        <input type="time" class="form-control border-0" id="collectTime">
-                    </div>
-                </div>
-            </form>
+                </form>
 
-            <p class="small text-muted">
-                Enter all necessary detail about the auction. This information will be accessible to the user
-            </p>
-            
-            <div class="NgxEditor__Wrapper my-4">
-                <ngx-editor-menu [editor]="detailsEditor"> </ngx-editor-menu>
-                <ngx-editor
-                  [editor]="detailsEditor"
-                  (ngModel)="html"
-                  (disabled)="false"
-                  [placeholder]="'Type here...'"
-                ></ngx-editor>
+                <p class="small text-muted">
+                    Enter all necessary detail about the auction. This information will be accessible to the user
+                </p>
+                
+                <div class="NgxEditor__Wrapper my-4">
+                    <ngx-editor-menu [editor]="detailsEditor"> </ngx-editor-menu>
+                    <ngx-editor
+                    [editor]="detailsEditor"
+                    (ngModel)="html"
+                    (disabled)="false"
+                    [placeholder]="'Type here...'"
+                    ></ngx-editor>
+                </div>
+
+                <button class="btn btn-sm btn-success shadow-sm">save</button>
+                <span class="text-muted ms-3">
+                    <i class="bi bi-slash-circle"></i>
+                    changes not saved
+                </span>
             </div>
-
-            <button class="btn btn-sm btn-success shadow-sm">save</button>
-            <span class="text-muted ms-3">
-                <i class="bi bi-slash-circle"></i>
-                changes not saved
-            </span>
+            <hr>
         </div>
-        <hr>
-    </div>
-    <div>
-        <h3 (click)="showHideSection('terms')">
-            <i *ngIf="showTerms" class="bi bi-chevron-down"></i>
-            <i *ngIf="!showTerms" class="bi bi-chevron-right"></i>
-            Terms
-        </h3>
-        <div class="ms-5" *ngIf="showTerms">
-            <p class="small text-muted">
-                Enter all necessary detail about the item. This information will be accessible to the user
-            </p>
-            
-            <div class="NgxEditor__Wrapper my-4">
-                <ngx-editor-menu [editor]="termsEditor"> </ngx-editor-menu>
-                <ngx-editor
-                  [editor]="termsEditor"
-                  (ngModel)="html"
-                  (disabled)="false"
-                  [placeholder]="'Type here...'"
-                ></ngx-editor>
-              </div>
+        <div>
+            <h3 (click)="showHideSection('terms')">
+                <i *ngIf="showTerms" class="bi bi-chevron-down"></i>
+                <i *ngIf="!showTerms" class="bi bi-chevron-right"></i>
+                Terms
+            </h3>
+            <div class="ms-5" *ngIf="showTerms">
+                <p class="small text-muted">
+                    Enter all necessary detail about the item. This information will be accessible to the user
+                </p>
+                
+                <div class="NgxEditor__Wrapper my-4">
+                    <ngx-editor-menu [editor]="termsEditor"> </ngx-editor-menu>
+                    <ngx-editor
+                    [editor]="termsEditor"
+                    (ngModel)="html"
+                    (disabled)="false"
+                    [placeholder]="'Type here...'"
+                    ></ngx-editor>
+                </div>
 
-            <button class="btn btn-sm btn-success shadow-sm">save</button>
-            <span class="text-muted ms-3">
-                <i class="bi bi-slash-circle"></i>
-                changes not saved
-            </span>
+                <button class="btn btn-sm btn-success shadow-sm">save</button>
+                <span class="text-muted ms-3">
+                    <i class="bi bi-slash-circle"></i>
+                    changes not saved
+                </span>
+            </div>
+            <hr>
         </div>
-        <hr>
-    </div>
-</section>
+    </section>    
+</div>
+

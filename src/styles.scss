@@ -17,3 +17,15 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.main-panel {
+    margin-left: 200px;
+    @extend .px-4;
+    @extend .py-1;
+}
+
+@media screen and (max-width: 480px) {
+    .main-panel {
+        margin-left: 50px;
+    }
+}

@@ -1,97 +1,101 @@
-<header>
-    <a class="d-flex link-primary" [routerLink]="['../bidders']">
-       <i class="bi bi-chevron-left"></i> 
-       <p class="m-0">bidders</p>
-    </a>
-    
-    <p class="ps-2 fs-1 m-0 d-flex">
-        auction-name
-        <i class="bi bi-chevron-right"></i>
-        bidders
-    </p>
-    <p class="text-muted m-0 ms-2 small">
-        bidders name | 507f1f77bcf86cd799439011
-    </p>
-</header>
-<app-header-rule></app-header-rule>
+<app-sidenav></app-sidenav>
+<div class="main-panel">
+    <header>
+        <a class="d-flex link-primary" [routerLink]="['../bidders']">
+        <i class="bi bi-chevron-left"></i> 
+        <p class="m-0">bidders</p>
+        </a>
+        
+        <p class="ps-2 fs-1 m-0 d-flex">
+            auction-name
+            <i class="bi bi-chevron-right"></i>
+            bidders
+        </p>
+        <p class="text-muted m-0 ms-2 small">
+            bidders name | 507f1f77bcf86cd799439011
+        </p>
+    </header>
+    <app-header-rule></app-header-rule>
 
-<div class="text-center my-4">
-    <i class="bi bi-person-circle display-1"></i>
-    <p class="fs-3">
-        Name-of-bidder
-    </p>
-    <p class="text-muted">507f1f77bcf86cd799439011</p>
-</div>
+    <div class="text-center my-4">
+        <i class="bi bi-person-circle display-1"></i>
+        <p class="fs-3">
+            Name-of-bidder
+        </p>
+        <p class="text-muted">507f1f77bcf86cd799439011</p>
+    </div>
 
 
-<section class="p-3">
-    <div>
-        <h3 (click)="showHideSection('documents')">
-            <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
-            <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
-            Documents
-        </h3>
-        <div class="ms-5" *ngIf="showDocuments">
-            <div class="d-flex flex-wrap align-items-end ">
-                <div class="doc-container">
-                    <p>ID Document</p>
-                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
-                        <div class="doc-download">
-                            <p class="doc-card-top">
-                                <i class="bi bi-download"></i>
-                                Download
-                            </p>
-                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
-                        </div>
-                        <p class="text-muted text-start">name-of-document.pdf</p>
-                    </a>
-                </div>
-                <div class="doc-container">
-                    <p>Proof of Residence</p>
-                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
-                        <div class="doc-download">
-                            <p class="doc-card-top">
-                                <i class="bi bi-download"></i>
-                                Download
-                            </p>
-                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
-                        </div>
-                        <p class="text-muted text-start">name-of-document.pdf</p>
-                    </a>
-                </div>
-                <div class="doc-container">
-                    <p>Signed Auction Rules</p>
-                    <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
-                        <div class="doc-download">
-                            <p class="doc-card-top">
-                                <i class="bi bi-download"></i>
-                                Download
-                            </p>
-                            <i class="bi bi-file-earmark-text display-1 my-2"></i>
-                        </div>
-                        <p class="text-muted text-start">name-of-document.pdf</p>
-                    </a>
+    <section class="p-3">
+        <div>
+            <h3 (click)="showHideSection('documents')">
+                <i *ngIf="showDocuments" class="bi bi-chevron-down"></i>
+                <i *ngIf="!showDocuments" class="bi bi-chevron-right"></i>
+                Documents
+            </h3>
+            <div class="ms-5" *ngIf="showDocuments">
+                <div class="d-flex flex-wrap align-items-end ">
+                    <div class="doc-container">
+                        <p>ID Document</p>
+                        <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                            <div class="doc-download">
+                                <p class="doc-card-top">
+                                    <i class="bi bi-download"></i>
+                                    Download
+                                </p>
+                                <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                            </div>
+                            <p class="text-muted text-start">name-of-document.pdf</p>
+                        </a>
+                    </div>
+                    <div class="doc-container">
+                        <p>Proof of Residence</p>
+                        <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                            <div class="doc-download">
+                                <p class="doc-card-top">
+                                    <i class="bi bi-download"></i>
+                                    Download
+                                </p>
+                                <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                            </div>
+                            <p class="text-muted text-start">name-of-document.pdf</p>
+                        </a>
+                    </div>
+                    <div class="doc-container">
+                        <p>Signed Auction Rules</p>
+                        <a href="https://unsplash.com/photos/GJao3ZTX9gU/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Nnx8ZG9jdW1lbnR8ZW58MHx8fHwxNjQ3NTA4OTUy&force=true">
+                            <div class="doc-download">
+                                <p class="doc-card-top">
+                                    <i class="bi bi-download"></i>
+                                    Download
+                                </p>
+                                <i class="bi bi-file-earmark-text display-1 my-2"></i>
+                            </div>
+                            <p class="text-muted text-start">name-of-document.pdf</p>
+                        </a>
+                    </div>
                 </div>
             </div>
+            <hr>
         </div>
-        <hr>
-    </div>
-    
-    <div>
-        <h3 (click)="showHideSection('details')">
-            <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
-            <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
-            Details
-        </h3>
-        <div class="ms-5" *ngIf="showDetails" >
-    
-            <p class="fs-4 mt-5">Email</p>
-            <p class="text-muted">bidderName@email.com</p>
-    
-            <p class="fs-4 mt-5">Contact Number</p>
-            <p class="text-muted">+27 87 876 6291</p>
+        
+        <div>
+            <h3 (click)="showHideSection('details')">
+                <i *ngIf="showDetails" class="bi bi-chevron-down"></i>
+                <i *ngIf="!showDetails" class="bi bi-chevron-right"></i>
+                Details
+            </h3>
+            <div class="ms-5" *ngIf="showDetails" >
+        
+                <p class="fs-4 mt-5">Email</p>
+                <p class="text-muted">bidderName@email.com</p>
+        
+                <p class="fs-4 mt-5">Contact Number</p>
+                <p class="text-muted">+27 87 876 6291</p>
 
-        </div>        
-        <hr>
-    </div>
-</section>
+            </div>        
+            <hr>
+        </div>
+    </section>
+
+</div>

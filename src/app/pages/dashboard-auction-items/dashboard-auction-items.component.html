@@ -1,31 +1,35 @@
-<header>
-    <a class="d-flex link-primary" [routerLink]="['../']">
-       <i class="bi bi-chevron-left"></i> 
-       <p class="m-0">auction-name</p>
-    </a>
-    
-    <p class="ps-2 fs-1 m-0 d-flex">
-        auction-name
-        <i class="bi bi-chevron-right"></i>
-        Items
-    </p>
-    <p class="text-muted m-0 ms-2 small">
-        start date | start time - start date | start time
-    </p>
-</header>
-<app-header-rule></app-header-rule>
+<app-sidenav></app-sidenav>
+<div class="main-panel">
+    <header>
+        <a class="d-flex link-primary" [routerLink]="['../']">
+        <i class="bi bi-chevron-left"></i> 
+        <p class="m-0">auction-name</p>
+        </a>
+        
+        <p class="ps-2 fs-1 m-0 d-flex">
+            auction-name
+            <i class="bi bi-chevron-right"></i>
+            Items
+        </p>
+        <p class="text-muted m-0 ms-2 small">
+            start date | start time - start date | start time
+        </p>
+    </header>
+    <app-header-rule></app-header-rule>
 
-<section class="p-1 d-flex flex-wrap">
-    <app-card-auction-item></app-card-auction-item>
-    <app-card-auction-item></app-card-auction-item>
-    <app-card-auction-item></app-card-auction-item>
-    <app-card-auction-item></app-card-auction-item>
+    <section class="p-1 d-flex flex-wrap">
+        <app-card-auction-item></app-card-auction-item>
+        <app-card-auction-item></app-card-auction-item>
+        <app-card-auction-item></app-card-auction-item>
+        <app-card-auction-item></app-card-auction-item>
 
-    <div class="add-new-card">
-        <div>
-            <i class="bi bi-plus-lg"></i>
-            <p>Create New Auction Item</p>            
+        <div class="add-new-card">
+            <div>
+                <i class="bi bi-plus-lg"></i>
+                <p>Create New Auction Item</p>            
+            </div>
+
         </div>
+    </section>    
+</div>
 
-    </div>
-</section>

@@ -8,6 +8,7 @@ import { DashboardAuctionDetailsComponent } from './pages/dashboard-auction-deta
 import { DashboardAuctionItemComponent } from './pages/dashboard-auction-item/dashboard-auction-item.component';
 import { DashboardAuctionItemsComponent } from './pages/dashboard-auction-items/dashboard-auction-items.component';
 import { AccountComponent } from './pages/account/account.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: 'dashboard/auction/details', component: DashboardAuctionDetailsComponent },
   { path: 'dashboard/auction/item', component: DashboardAuctionItemComponent },
   { path: 'dashboard/auction/items', component: DashboardAuctionItemsComponent },
-  { path: 'account', component: AccountComponent }
+  { path: 'account', component: AccountComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
